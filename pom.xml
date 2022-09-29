@@ -23,6 +23,11 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <spring.boot.maven.plugin.version>2.5.7</spring.boot.maven.plugin.version>
+        <org.aspectj.version>1.9.7</org.aspectj.version>
+        <org.apache.commons.version>1.21</org.apache.commons.version>
+        <net.logstash.logback.version>5.3</net.logstash.logback.version>
+        <commons-io.version>2.6</commons-io.version>
+
     </properties>
 
     <dependencies>
@@ -76,23 +81,23 @@
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
-            <version>1.9.7</version>
+            <version>${aspectj.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-compress</artifactId>
-            <version>1.21</version>
+            <version>${org.apache.commons.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>net.logstash.logback</groupId>
             <artifactId>logstash-logback-encoder</artifactId>
-            <version>5.3</version>
+            <version>${net.logstash.logback.version}</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>2.6</version>
+            <version>${commons-io.version}</version>
         </dependency>
     </dependencies>
 

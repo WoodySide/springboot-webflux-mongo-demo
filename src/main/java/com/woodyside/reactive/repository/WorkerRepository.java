@@ -10,5 +10,5 @@ import reactor.core.publisher.Flux;
 @Repository
 public interface WorkerRepository extends ReactiveMongoRepository<Worker, String> {
 
-    Flux<WorkerDto> findByAgeBetween(Range<Integer> ageRange);
+    Flux<Worker> findByAgeBetween(Range<Integer> ageRange);
 }

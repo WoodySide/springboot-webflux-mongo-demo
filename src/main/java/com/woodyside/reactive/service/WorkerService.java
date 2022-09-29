@@ -30,6 +30,7 @@ public class WorkerService {
 
     public Flux<WorkerDto> getWorkersWithAgeRange(Integer from, Integer to) {
         return workerRepository.findByAgeBetween(Range.closed(from,to))
+                .map(DtoConverter::modelToDto)
                 .switchIfEmpty(Mono.error(NoWorkerFoundException::new));
     }
 
