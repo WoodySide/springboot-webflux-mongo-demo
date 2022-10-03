@@ -3,10 +3,12 @@ package com.woodyside.reactive.controller;
 import com.woodyside.reactive.dto.WorkerDto;
 import com.woodyside.reactive.service.WorkerService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+
 
 @RestController
 @RequestMapping(value = "api/v1/workers")
@@ -31,6 +33,7 @@ public class WorkerController {
     }
 
     @PostMapping(path = "/", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(value = HttpStatus.CREATED)
     public Mono<WorkerDto> registerNewWorker(@RequestBody Mono<WorkerDto> newWorker) {
         return workerService.registerNewWorker(newWorker);
     }
@@ -41,6 +44,7 @@ public class WorkerController {
     }
 
     @DeleteMapping(value = "/delete/{id}")
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public Mono<Void> deleteWorkerById(@PathVariable(value = "id") String workerId) {
         return workerService.deleteWorker(workerId);
     }
