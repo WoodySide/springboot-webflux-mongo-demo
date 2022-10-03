@@ -33,7 +33,7 @@ public class WorkerRepositoryTest {
 
     @Test
     @DisplayName(value = "# Save method test")
-    @Tag(value = "Worker repository test")
+    @Tag(value = "Worker_repository_test")
     public void whenSave_thenReturnSavedWorker() {
 
         Worker worker1 = Worker.builder()
@@ -55,8 +55,8 @@ public class WorkerRepositoryTest {
 
     @Test
     @DisplayName(value = "# Find workers by age between method test")
-    @Tag(value = "Worker repository test")
-    public void whenFindWorkersByAgeBetween_returnWorkers() {
+    @Tag(value = "Worker_repository_test")
+    public void whenFindWorkersByAgeBetween_returnWorkersAccordingCondition() {
 
         Worker worker1 = Worker.builder()
                 .skills(List.of("Java", "Spring", "SQL"))
@@ -92,7 +92,7 @@ public class WorkerRepositoryTest {
 
     @Test
     @DisplayName(value = "# Find worker by id method test")
-    @Tag(value = "Worker repository test")
+    @Tag(value = "Worker_repository_test")
     public void whenFindWorkerById_thenReturnWorker() {
 
         Worker worker1 = Worker.builder()
@@ -126,7 +126,7 @@ public class WorkerRepositoryTest {
 
     @Test
     @DisplayName(value = "# Find all workers test method")
-    @Tag(value = "Worker repository test")
+    @Tag(value = "Worker_repository_test")
     public void whenFindAllWorker_thenReturnAllWorkers() {
 
         Worker worker1 = Worker.builder()
@@ -163,7 +163,7 @@ public class WorkerRepositoryTest {
 
     @Test
     @DisplayName(value = "# Delete worker test method")
-    @Tag(value = "Worker repository test")
+    @Tag(value = "Worker_repository_test")
     public void whenDeleteWorker_then_ReturnNothing() {
 
         Worker worker1 = Worker.builder()
